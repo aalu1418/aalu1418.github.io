@@ -1,4 +1,2 @@
 ## Professional Website for Aaron Lu
-
-#### Resources
-https://getmdl.io/index.html (simpler material ui design...no js frameworks)
+A website to showcase professional (and some personal) accomplishments based on a template from [Material Design Lite](https://getmdl.io/)
