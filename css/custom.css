@@ -2,11 +2,26 @@
   text-align: center;
 }
 
-.container{
+.container {
   max-width: 800px;
 }
 
-.spaced{
+.navbar_container{
+  margin : auto;
+  max-width: 800px;
+}
+
+.navbar {
+  display: block;
+  width: 100%;
+  height: 6.5rem;
+  background: #fff;
+  z-index: 99;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.spaced {
   margin-top: 9rem;
   margin-bottom: 7rem;
 }
@@ -14,4 +29,16 @@
 .material-icons.logo {
   font-size: 75px;
   text-align: center;
+}
+
+#stickyNav {
+  background: white;
+  height: 60px;
+  /* width: 300px; */
+  position: absolute;
+  margin: 0 auto;
+  /* top: 300px; */
+}
+#stickyNav ul {
+  float: left;
 }
