@@ -24,4 +24,18 @@ $(document).ready(function() {
       });
     }
   });
+  $('#more-button').click(function() {
+    console.log(false);
+    $('.dropdown').css({
+      'display':'block'
+    });
+  });
+  $('#more-button').click(function() {
+    if ($('.dropdown').css('display') == 'block'){
+      console.log(true);
+      $('.dropdown').css({
+        'display':'none'
+      });
+    }
+  });
 });
