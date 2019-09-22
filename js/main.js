@@ -1,8 +1,17 @@
 //navbar - https://stackoverflow.com/questions/16329937/docking-a-fixed-nav-bar-to-the-top-on-scroll
 $(document).ready(() => {
-  var totalH = $("#stickyNav").offset().top;
+  const totalH = $("#stickyNav").offset().top;
   $(window).bind("scroll", () => {
-    var vPos = $(window).scrollTop();
+    const vPos = $(window).scrollTop();
+
+    let navbar_container_width = "80%"
+    // console.log($(window).width());
+    if ($(window).width() < 400){
+      navbar_container_width = "90%";
+    } else {
+      navbar_container_width = "80%";
+    }
+    // console.log(navbar_container_width);  
 
     if (totalH < vPos) {
       $("#stickyNav").css({
@@ -11,7 +20,7 @@ $(document).ready(() => {
         left: 0
       });
       $(".navbar_container").css({
-        width: "80%"
+        width: navbar_container_width
       });
     } else {
       $("#stickyNav").css({

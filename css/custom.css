@@ -131,5 +131,7 @@ html {
   .navbar-link {
     font-size:10.5px;
   }
-
+  .navbar {
+    width: 90%;
+  }
 }
