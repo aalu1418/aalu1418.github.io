@@ -60,15 +60,11 @@
   /* width:100px; */
 }
 
-.navbar-more {
-  display: none;
-}
-
 .navbar-long {
   display: block;
 }
 
-.dropdown{
+.dropdown {
   display: none;
   position: absolute;
   list-style: none;
@@ -78,6 +74,12 @@
   border: 1px solid #eee;
   background-color: white;
   border-radius: 10px;
+  margin: 1pt;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-item:hover .dropdown {
+  display: block;
 }
 
 #stickyNav {
