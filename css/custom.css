@@ -82,6 +82,14 @@
   display: block;
 }
 
+.navbar-list > .navbar-edu {
+  display: block;
+}
+
+.more-edu {
+  display: none;
+}
+
 #stickyNav {
   /* background: white; */
   /* height: 60px; */
@@ -111,4 +119,17 @@ html {
   .navbar-long {
     display: none;
   }
+}
+
+@media (max-width: 500px) {
+  .navbar-list > .navbar-edu {
+    display:none;
+  }
+  .more-edu {
+    display:block;
+  }
+  .navbar-link {
+    font-size:10.5px;
+  }
+
 }
