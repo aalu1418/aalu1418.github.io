@@ -11,7 +11,7 @@ $(document).ready(() => {
     } else {
       navbar_container_width = "80%";
     }
-    // console.log(navbar_container_width);  
+    // console.log(navbar_container_width);
 
     if (totalH < vPos) {
       $("#stickyNav").css({
@@ -34,3 +34,10 @@ $(document).ready(() => {
     }
   });
 });
+
+$("#interest-icons > div > img").click(() => {
+  const name = $(event.target).attr("alt");
+  $("#"+name).slideToggle();
+  $("#"+name).siblings("p").slideUp();
+  // console.log($("#"+name).siblings("p").css("display","none"));
+})
