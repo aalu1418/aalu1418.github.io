@@ -144,6 +144,26 @@
   justify-content: space-between;
 }
 
+.details > ul, .details > ul > li > ul {
+  list-style-position: outside;
+  list-style-type:none;
+  margin-top: 0pt;
+}
+
+.details > ul > li > ul > li {
+  margin: 0pt;
+}
+
+#projects > div > div > .details > ul > li > ul {
+  display:none;
+}
+
+.details > ul > li > div {
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+
 #interests > p {
   display:none;
 }

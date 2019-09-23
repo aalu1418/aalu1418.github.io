@@ -41,3 +41,12 @@ $("#interest-icons > div > img").click(() => {
   $("#"+name).siblings("p").slideUp();
   // console.log($("#"+name).siblings("p").css("display","none"));
 })
+
+$(".details > ul > li > div").click(() => {
+  const list1 = $(event.target).siblings("ul"); //handle click on div
+  const list2 = $(event.target).parent("div").siblings("ul") //handle click on div content
+  // console.log(list1.length, list2.length);
+  const list = (list1.length === 1) ? list1:list2;
+  // console.log(list);
+  $(list[0]).slideToggle();
+})
