@@ -14,12 +14,17 @@
 .spaced > .row {
   display:flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .columns > .row{
   display:flex;
   flex-direction: row;
   justify-content: center;
+}
+
+.row > p {
+  margin:0;
 }
 
 .row.content {
@@ -47,8 +52,8 @@
 }
 
 .spaced {
-  padding-top: 20px;
-  /* border-top: 1px solid #eee; */
+  padding-top: 60px;
+  border-top: 1px solid #eee;
   /* padding-bottom: 3rem; */
 }
 
