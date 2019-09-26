@@ -145,6 +145,10 @@
   cursor: pointer;
 }
 
+.small-logo.no-click{
+  cursor: default;
+}
+
 .image.mobile{
   width: 75px;
   margin: 5px;
