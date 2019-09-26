@@ -172,6 +172,10 @@
   margin: 0pt;
 }
 
+a {
+  color: black;
+}
+
 #projects > div > div > .details > ul > li > ul {
   display:none;
 }
