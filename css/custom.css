@@ -176,6 +176,14 @@ a {
   color: black;
 }
 
+#darkmode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  margin-bottom: 10%;
+}
+
 #projects > div > div > .details > ul > li > ul {
   display:none;
 }
