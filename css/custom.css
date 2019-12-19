@@ -139,7 +139,7 @@
 }
 
 .image.round{
-  clip-path: circle(35% at center);
+  clip-path: circle(45% at center);
   object-fit: cover;
   filter: grayscale(100%);
 }
