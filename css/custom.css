@@ -1,9 +1,14 @@
 .header {
   text-align: center;
+  margin-top: 25%;
 }
 
 .container {
   max-width: 800px;
+}
+
+.main-icons-header {
+  padding-top: 60px;
 }
 
 .navbar_container {
@@ -235,6 +240,18 @@ a {
   font-size: 12px;
 }
 
+#skills {
+  margin-bottom:50px;
+}
+
+.only-print {
+  display: none;
+}
+
+.contact {
+  display: none;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -279,4 +296,136 @@ html {
   .image.main{
     display:none;
   }
+}
+
+@media print
+{
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
+
+    .only-print {
+      display: block !important;
+    }
+
+    @page {
+      size: letter; /* DIN A4 standard, Europe */
+      margin: 0.75cm -0.75cm;
+    }
+
+    h1 {
+      font-size: 26pt;
+      margin-bottom: 2pt;
+    }
+
+    h4 {
+      font-size: 12pt;
+      font-weight: bold;
+      margin-bottom: 2pt;
+    }
+
+    h5 {
+      font-size: 12pt;
+      /* font-weight: bold; */
+      margin-bottom: 2pt;
+    }
+
+    p {
+      font-size: 10pt;
+      margin: 0;
+    }
+
+    li {
+      font-size: 10pt;
+    }
+
+    ul {
+      margin-bottom: 2pt;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .header {
+      margin-top: 0;
+    }
+
+    .main-icons-header {
+      padding-top: 10px;
+    }
+
+    .logo {
+      width:25%;
+      padding: 5pt;
+    }
+
+    p.logo-text{
+      font-size: 9pt;
+      text-align: left;
+      margin-right: 5pt;
+    }
+
+    .spaced {
+      padding-top: 5px;
+      border-top: 1px solid #eee;
+      /* padding-bottom: 3rem; */
+    }
+
+    .spaced.nav_extra {
+      padding-top: 5px;
+    }
+
+    div.columns.nine.details {
+      width: 100%;
+    }
+
+    .print-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .print-flex-center {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    div.print-flex-header {
+      width: 150px;
+      min-width: 150px;
+      margin-right: 5pt;
+    }
+
+    ul.print-flex-details {
+      width: 575px;
+      margin-bottom: 0pt;
+    }
+
+    div.row.content {
+      margin-bottom: 2pt;
+    }
+
+    .small-logo {
+      width: 15px;
+      margin: 2px;
+    }
+
+    #skills {
+      margin-bottom:0;
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-size: 8pt;
+      border-left: 0.5pt solid black;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
 }

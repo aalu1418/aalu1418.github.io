@@ -36,27 +36,34 @@
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
-      <section class="header" style="margin-top: 25%">
-        <h1 style="margin:0">Aaron Lu</h1>
-        <div id=darkmode>
+      <section class="header">
+        <span class="print-flex-center">
+          <h1 style="margin:0">Aaron Lu</h1>
+          <div class="contact">
+            <a href="mailto:aalu1418@gmail.com">aalu1418@gmail.com</a>
+            <a href="https://www.linkedin.com/in/aalu1418">LinkedIn: @aalu1418</a>
+            <a href="https://github.com/aalu1418/">GitHub: @aalu1418</a>
+          </div>
+        </span>
+        <div class="no-print" id=darkmode>
           <p style="margin:0">dark mode: </p><i class="material-icons" style="font-size:40px; cursor:pointer; margin:0" id="darkmode">toggle_off</i>
         </div>
-        <div class="row" style="padding-top: 60px">
-          <div class="four columns">
+        <div class="main-icons-header row">
+          <div class="four columns print-flex-center">
             <img class="logo" src="images/web-programming.svg" alt="code">
-            <p>Full stack web development and blockchain development</p>
+            <p class="logo-text">Full stack web development and blockchain development</p>
           </div>
-          <div class="four columns">
+          <div class="four columns print-flex-center">
             <img class="logo" src="images/paper-plane.svg" alt="airplane">
-            <p>Aerospace engineer specializing in flight dynamics & control</p>
+            <p class="logo-text">Aerospace engineer specializing in flight dynamics & control</p>
           </div>
-          <div class="four columns">
+          <div class="four columns print-flex-center">
             <img class="logo" src="images/toronto.svg" alt="toronto">
-            <p>Based in Toronto, Canada and originally from Michigan, USA</p>
+            <p class="logo-text">Based in Toronto, Canada and originally from Michigan, USA</p>
           </div>
         </div>
       </section>
-      <div class="navbar" id="stickyNav">
+      <div class="navbar no-print" id="stickyNav">
         <div class="navbar_container">
           <ul class="navbar-list">
             <li class="navbar-item">
@@ -95,22 +102,26 @@
         <h4>About Me</h4>
         <div class="row content">
           <div>
-            <p>
+            <p class="no-print">
               Hi! My name is Aaron Lu and I am a student at George Brown College studying Blockchain Development.
               I am a aerospace engineer turned programmer and am working towards becoming a full-stack web developer.
               (and blockchain developer!)
             </p>
-            <p>
+            <p class="no-print">
               My fascination is with complex systems - understanding them, developing them, and ultimately, improving them.
               Through my studies and work experience, I realized that the foundation of many complex systems is code - from control systems to websites, everything involves code!
             </p>
-            <p>
+            <p class="no-print">
               In my spare time, I love being outdoors and working with my hands.
               It can look like anything from hiking to ultimate frisbee to cooking to random projects!
             </p>
+            <p class="only-print">
+              Hi! My name is Aaron Lu and I am an aerospace engineer turned programmer/web developer (and blockchain developer!).
+              My fascination is with complex systems - from control systems to blockchain. My goal is to understand, develop, and, ultimately, improve them.
+            </p>
           </div>
-          <div class="five columns vert-align" style ="width:300px" id="interests">
-            <img src="images/headshot.JPG" alt="headshot-photo" class="image round" />
+          <div class="five columns vert-align no-print" style ="width:300px" id="interests">
+            <img src="images/headshot.jpg" alt="headshot-photo" class="image round" />
             <div class="row" id="interest-icons">
               <div><img class="small-logo" src="images/toronto.svg" alt="toronto"></div>
               <div><img class="small-logo" src="images/mountains.svg" alt="hiking"></div>
@@ -135,39 +146,39 @@
         <div class="row content">
           <div class="nine columns details">
             <ul>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Programmer</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
+                <ul class='print-flex-details'>
                   <li><i>April 2019 - current</i> </li>
                   <li>Generating diagrams and figures illustrating optimization concepts using LaTeX/Tikz/PGFplots and algorithms in python</li>
                 </ul>
               </li>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Graduate Student Instructor & Instructional Aide</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
-                  <li><i>Ann Arbor: Sep 2017 - April 2018, September 2018 - December 2018</i> </li>
+                <ul class='print-flex-details'>
+                  <li><i>Ann Arbor, MI: Sep 2017 - April 2018, September 2018 - December 2018</i> </li>
                   <li>Assisted in teaching 2nd-year and 4th-year students design concepts and providing feedback via presentations and graded assignments.</li>
                 </ul>
               </li>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Undergraduate Research Assistant</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
-                  <li><i>Ann Arbor: May 2016 - August 2016</i> </li>
-                  <li>Assisted in preparation of <a href="https://a2srl.engin.umich.edu/research/flexible/xhale/">X-HALE aircraft</a> for flight test through structural testing.</li>
+                <ul class='print-flex-details'>
+                  <li><i>Ann Arbor, MI: May 2016 - August 2016</i> </li>
+                  <li>Assisted in preparation of <a href="https://a2srl.engin.umich.edu/research/flexible/xhale/">X-HALE aircraft</a> for flight & structural testing.</li>
                 </ul>
               </li>
             </ul>
           </div>
-          <div class="three columns">
+          <div class="three columns no-print">
             <img src="images/umich.jpg" alt="umich" class="image main">
           </div>
         </div>
@@ -180,29 +191,29 @@
         <div class="row content">
           <div class="nine columns details">
             <ul>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Flight Controls Intern</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
+                <ul class='print-flex-details'>
                   <li><i>Palmdale, CA: May 2018 - August 2018</i> </li>
                   <li>Developed program for uncertainty quantification & robustness testing during MIMO control system design.</li>
                 </ul>
               </li>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Flight Test Intern</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
+                <ul class='print-flex-details'>
                   <li><i>Edwards AFB, CA: June 2017 - August 2017</i> </li>
-                  <li>Supported flight sciences on the F-35 JSF program during drag-chute testing.</li>
+                  <li>Supported flight sciences on the F-35 drag-chute testing program.</li>
                 </ul>
               </li>
             </ul>
           </div>
-          <div class="three columns">
+          <div class="three columns no-print">
             <img src="images/lmco.png" alt="lmco" class="image main">
           </div>
         </div>
@@ -216,12 +227,12 @@
         <div class="row content">
           <div class="nine columns details">
             <ul>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Blockchain Development Program</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
+                <ul class='print-flex-details'>
                   <li><i>Toronto, ON: September 2019 - current</i> </li>
                   <li>Subject matter covers full-stack web development and blockchain development.</li>
                 </ul>
@@ -229,7 +240,7 @@
             </ul>
           </div>
           <div class="three columns">
-            <img src="images/gbc.svg" alt="gbc" class="image main">
+            <img src="images/gbc.svg" alt="gbc" class="image main no-print">
           </div>
         </div>
         <div class="organization-header">
@@ -239,22 +250,22 @@
         <div class="row content">
           <div class="nine columns details">
             <ul>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Masters in Aerospace Engineering</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
+                <ul class='print-flex-details'>
                   <li><i>Ann Arbor, MI: January 2018 - December 2018</i> </li>
                   <li>Specialization in flight dynamics and control.</li>
                 </ul>
               </li>
-              <li>
-                <div>
+              <li class='print-flex'>
+                <div class='print-flex-header'>
                   <b>Bachelor in Aerospace Engineering</b>
-                  <i class="material-icons">expand_more</i>
+                  <i class="material-icons no-print">expand_more</i>
                 </div>
-                <ul>
+                <ul class='print-flex-details'>
                   <li><i>Ann Arbor, MI: September 2014 - December 2017</i> </li>
                   <li>Minor in electrical engineering (control systems)</li>
                 </ul>
@@ -262,11 +273,11 @@
             </ul>
           </div>
           <div class="three columns">
-            <img src="images/umich.jpg" alt="umich" class="image main">
+            <img src="images/umich.jpg" alt="umich" class="image main no-print">
           </div>
         </div>
       </div>
-      <div class="spaced" id="projects">
+      <div class="spaced no-print" id="projects">
         <h4>Projects</h4>
         <h5 style="margin:0">Coding Projects</h5>
         <div class="row content">
@@ -276,8 +287,20 @@
               <ul>
                 <li>
                   <div>
+                    <b>Time + Weather Chrome Extension</b>
+                    <i class="material-icons no-print">expand_more</i>
+                  </div>
+                  <ul>
+                    <li><i>December 2019</i></li>
+                    <li>Inspired by the Currently Chrome Extension for a new tab.</li>
+                    <li>Built using React to integrate weather and TTC (Toronto Transit) alerts.</li>
+                    <li>Check it out <a href="https://github.com/aalu1418/chromeExtension-newTab">here</a>.</li>
+                  </ul>
+                </li>
+                <li>
+                  <div>
                     <b>Simple Messenger</b>
-                    <i class="material-icons">expand_more</i>
+                    <i class="material-icons no-print">expand_more</i>
                   </div>
                   <ul>
                     <li><i>November 2019</i></li>
@@ -289,7 +312,7 @@
                 <li>
                   <div>
                     <b>CryptoView</b>
-                    <i class="material-icons">expand_more</i>
+                    <i class="material-icons no-print">expand_more</i>
                   </div>
                   <ul>
                     <li><i>September 2019</i></li>
@@ -311,7 +334,7 @@
                 <li>
                   <div>
                     <b>Chief Engineer - Regular Class</b>
-                    <i class="material-icons">expand_more</i>
+                    <i class="material-icons no-print">expand_more</i>
                   </div>
                   <ul>
                     <li><i>March 2016 - March 2017</i> </li>
@@ -323,7 +346,7 @@
                 <li>
                   <div>
                     <b>Construction Manager</b>
-                    <i class="material-icons">expand_more</i>
+                    <i class="material-icons no-print">expand_more</i>
                   </div>
                   <ul>
                     <li><i>March 2015 - March 2016</i> </li>
@@ -338,30 +361,30 @@
           </div>
         </div>
       </div>
-      <div class="spaced" id="skills" style="margin-bottom:50px;">
+      <div class="spaced" id="skills">
         <h4>Skills</h4>
         <div class="row">
-          <img class="small-logo no-click"src="images/data.svg" alt="programming">
-          <p><b>Programming: </b> Python, git, html/JavaScript/CSS, LaTeX, MATLAB, C/C++</p>
+          <img class="small-logo no-click no-print"src="images/data.svg" alt="programming">
+          <p><b>Programming: </b> Python, git, React, html/JavaScript/CSS, Solidity, LaTeX/Tikz/PGFplots, MATLAB, C/C++</p>
         </div>
         <div class="row">
-            <img class="small-logo no-click"src="images/graphic-design.svg" alt="cad">
-            <p><b>CAD: </b>SolidWorks, CATIA V5, AutoCAD</p>
+            <img class="small-logo no-click no-print"src="images/graphic-design.svg" alt="cad">
+            <p><b>Engineering: </b>SolidWorks, CATIA V5, AutoCAD, Simulink, LabView</p>
         </div>
-        <div class="row">
+        <!-- <div class="row">
           <img class="small-logo no-click"src="images/analysis.svg" alt="analysis">
-          <p><b>Analysis: </b>Simulink, LabView</p>
-        </div>
+          <p><b>Analysis: </b></p>
+        </div> -->
         <div class="row">
-            <img class="small-logo no-click"src="images/tools.svg" alt="manufacturing">
+            <img class="small-logo no-click no-print"src="images/tools.svg" alt="manufacturing">
             <p><b>Manufacturing: </b>Composites, metal/wood working, milling, 3D printing, soldering</p>
         </div>
-        <div class="row">
-            <img class="small-logo no-click"src="images/translation.svg" alt="languages">
+        <div class="row no-print">
+            <img class="small-logo no-click no-print"src="images/translation.svg" alt="languages">
             <p><b>Languages: </b>English, Chinese (beginner)</p>
         </div>
       </div>
-      <div class="footer" id="sources">
+      <div class="footer no-print" id="sources">
         <div>
           <p> <b>Sources</b> </p>
           <p>
@@ -371,14 +394,14 @@
             Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>, <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a>, <a href="https://www.flaticon.com/authors/icongeek26" title="Icongeek26">Icongeek26</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
           </p>
         </div>
-        <div class="footer-icons">
+        <div class="footer-icons no-print">
           <a href="mailto:aalu1418@gmail.com">
             <img class="small-logo" src="images/gmail_logo.png" alt="gmail logo"/>
           </a>
           <a href="https://www.linkedin.com/in/aalu1418">
             <img class="small-logo" src="images/linkedin_logo.png" alt="linkedin logo"/>
           </a>
-          <a href="https://github.com/aalu1418/aalu1418.github.io">
+          <a href="https://github.com/aalu1418">
             <img class="small-logo" src="images/github_logo.png" alt="github logo" id="github"/>
           </a>
         </div>
