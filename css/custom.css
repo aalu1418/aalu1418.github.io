@@ -322,13 +322,13 @@ html {
     h4 {
       font-size: 12pt;
       font-weight: bold;
-      margin-bottom: 2pt;
+      margin-bottom: 1pt;
     }
 
     h5 {
       font-size: 12pt;
       /* font-weight: bold; */
-      margin-bottom: 2pt;
+      margin-bottom: 1pt;
     }
 
     p {
@@ -338,6 +338,7 @@ html {
 
     li {
       font-size: 10pt;
+      margin-bottom: 0.5rem;
     }
 
     ul {
@@ -416,7 +417,11 @@ html {
     }
 
     #skills {
-      margin-bottom:0;
+      margin-bottom:0.5rem;
+    }
+
+    #qualifications > ul > li {
+      margin-bottom: 0;
     }
 
     .contact {
