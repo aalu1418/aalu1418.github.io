@@ -244,6 +244,11 @@ a {
   margin-bottom:50px;
 }
 
+#gitlab {
+  width: 60px;
+  margin: -7.5px;
+}
+
 .only-print {
   display: none;
 }
