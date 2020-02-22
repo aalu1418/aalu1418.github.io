@@ -59,11 +59,11 @@ $("#darkmode").click(() => {
   if ($("#darkmode").children("i").text() === "toggle_on") {
     //turn off dark mode
     $("#darkmode").children("i").text("toggle_off");
-    $("html, .navbar, #interest-icons > div, .logo, .small-logo, body, a").removeAttr("style");
+    $("html, .navbar, .dropdown, #interest-icons > div, .logo, .small-logo, body, a").removeAttr("style");
   } else {
     //turn on dark mode
     $("#darkmode").children("i").text("toggle_on");
-    $("html, .navbar, #interest-icons > div").css("background-color", "#121212");
+    $("html, .navbar, .dropdown, #interest-icons > div").css("background-color", "#121212");
     $("#interest-icons > div").css("border", "1.5px solid white")
     $("body, a").css("color", "white");
     $(".logo, .row > .small-logo, #interest-icons > div > .small-logo, #github").css("filter", "invert(85%)");
