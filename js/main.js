@@ -33,6 +33,18 @@ $(document).ready(() => {
       });
     }
   });
+
+  //turn off darkmode between 7am and 6pm && darkmode is currently on
+  const time = new Date();
+  const hour = time.getHours();
+  if (
+    hour > 7 && hour < 18 &&
+    $("#darkmode")
+      .children("i")
+      .text() === "toggle_on"
+  ) {
+    $("#darkmode").trigger("click");
+  }
 });
 
 $("#interest-icons > div > img").click(() => {
@@ -56,16 +68,31 @@ $(".details > ul > li > div").click(() => {
 });
 
 $("#darkmode").click(() => {
-  if ($("#darkmode").children("i").text() === "toggle_on") {
+  if (
+    $("#darkmode")
+      .children("i")
+      .text() === "toggle_on"
+  ) {
     //turn off dark mode
-    $("#darkmode").children("i").text("toggle_off");
-    $("html, .navbar, .dropdown, #interest-icons > div, .logo, .small-logo, body, a").removeAttr("style");
+    $("#darkmode")
+      .children("i")
+      .text("toggle_off");
+    $("html, .navbar, .dropdown, #interest-icons > div").css(
+      "background-color",
+      "white"
+    );
+    $("#interest-icons > div").css("border", "1.5px solid black");
+    $("body, a").css("color", "black");
+    $(
+      ".logo, .row > .small-logo, #interest-icons > div > .small-logo, #github"
+    ).css("filter", "invert(0)");
   } else {
     //turn on dark mode
-    $("#darkmode").children("i").text("toggle_on");
-    $("html, .navbar, .dropdown, #interest-icons > div").css("background-color", "#121212");
-    $("#interest-icons > div").css("border", "1.5px solid white")
-    $("body, a").css("color", "white");
-    $(".logo, .row > .small-logo, #interest-icons > div > .small-logo, #github").css("filter", "invert(85%)");
+    $("#darkmode")
+      .children("i")
+      .text("toggle_on");
+    $(
+      "html, .navbar, .dropdown, #interest-icons > div, .logo, .small-logo, body, a"
+    ).removeAttr("style");
   }
 });
