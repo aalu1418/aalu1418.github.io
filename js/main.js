@@ -1,7 +1,7 @@
 //navbar - https://stackoverflow.com/questions/16329937/docking-a-fixed-nav-bar-to-the-top-on-scroll
 $(document).ready(() => {
   const totalH = $("#stickyNav").offset().top;
-  $(window).bind("scroll", () => {
+  $(window).on("scroll", () => {
     const vPos = $(window).scrollTop();
 
     let navbar_container_width = "80%";
@@ -47,6 +47,7 @@ $(document).ready(() => {
   }
 });
 
+//toggle icon descriptions
 $("#interest-icons > div > img").click(() => {
   const name = $(event.target).attr("alt");
   $("#" + name).slideToggle();
@@ -56,6 +57,7 @@ $("#interest-icons > div > img").click(() => {
   // console.log($("#"+name).siblings("p").css("display","none"));
 });
 
+//toggle content
 $(".details > ul > li > div").click(() => {
   const list1 = $(event.target).siblings("ul"); //handle click on div
   const list2 = $(event.target)
@@ -67,6 +69,7 @@ $(".details > ul > li > div").click(() => {
   $(list[0]).slideToggle();
 });
 
+//toggle dark mode
 $("#darkmode").click(() => {
   if (
     $("#darkmode")

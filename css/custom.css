@@ -273,8 +273,24 @@ li.location-date {
   justify-content: space-between;
 }
 
-.logo, .row > .small-logo, #interest-icons > div > .small-logo, #github {
+.logo, .row > .small-logo, #interest-icons > div > .small-logo, #github, #continue > a > .small-logo {
   filter: invert(85%);
+}
+
+#continue {
+  margin-top: 20pt;
+  margin-bottom: 10pt;
+  height: 50pt;
+}
+
+#continue > a > .small-logo {
+  animation: breathe 4s ease-out infinite;
+}
+
+@keyframes breathe {
+  0% {transform: scale(1);}
+  50% {transform: scale(1.2);}
+  100% {transform: scale(1);}
 }
 
 @media (max-width: 800px) {
@@ -314,6 +330,10 @@ li.location-date {
     display: block;
   }
   .image.main {
+    display: none;
+  }
+
+  #continue {
     display: none;
   }
 }
