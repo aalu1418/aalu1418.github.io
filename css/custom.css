@@ -76,11 +76,13 @@ a {
   z-index: 99;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  opacity: 0;
 }
 
 .spaced {
   padding-top: 60px;
   border-top: 1px solid #ddd;
+  opacity: 1;
   /* padding-bottom: 3rem; */
 }
 
