@@ -76,7 +76,6 @@ a {
   z-index: 99;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
-  opacity: 0;
 }
 
 .spaced {
@@ -355,6 +354,10 @@ li.location-date {
     margin: 0.75cm -0.75cm;
   }
 
+  html {
+    background-color: #0000;
+  }
+
   body {
     color: black;
   }
@@ -397,6 +400,10 @@ li.location-date {
 
   .header {
     margin-top: 2.5rem;
+  }
+
+  .container {
+    width: 87%;
   }
 
   .main-icons-header {
