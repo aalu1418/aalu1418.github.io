@@ -42,7 +42,7 @@ $(document).ready(() => {
     .scroll(() => {
 
       if ($(window).scrollTop() != 0) {
-        $("#stickyNav").stop().fadeTo(500, 1);
+        $("#stickyNav").stop(true, false).fadeTo(250, 1);
       } else {
         $("#stickyNav").stop().fadeTo(250, 0);
         $("#about").stop().fadeTo(250, 0);
