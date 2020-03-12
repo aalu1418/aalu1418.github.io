@@ -17,16 +17,6 @@ $(document).ready(() => {
     }
     // console.log(navbar_container_width);
 
-    if (vPos != 0) {
-      $("#stickyNav").fadeTo(500, 1);
-    } else {
-      $("#stickyNav").queue([]);
-      $("#about").queue([]);
-      $("#stickyNav").fadeTo(250, 0);
-      $("#about").fadeTo(250, 0);
-      return;
-    }
-
     if (totalH < vPos) {
       $("#stickyNav").css({
         position: "fixed",
@@ -50,6 +40,14 @@ $(document).ready(() => {
 
   $(window)
     .scroll(() => {
+
+      if ($(window).scrollTop() != 0) {
+        $("#stickyNav").stop().fadeTo(500, 1);
+      } else {
+        $("#stickyNav").stop().fadeTo(250, 0);
+        $("#about").stop().fadeTo(250, 0);
+      }
+
       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
       $(".spaced").each(function() {
         /* Check the location of each desired element */
@@ -59,12 +57,12 @@ $(document).ready(() => {
         if (objectBottom < windowBottom + $(this).innerHeight() * 0.7) {
           //object comes into view (scrolling down)
           if ($(this).css("opacity") == 0) {
-            $(this).fadeTo(1000, 1);
+            $(this).stop().fadeTo(1000, 1);
           }
         } else {
           //object goes out of view (scrolling up)
           if ($(this).css("opacity") == 1) {
-            $(this).fadeTo(500, 0);
+            $(this).stop().fadeTo(500, 0);
           }
         }
       });
