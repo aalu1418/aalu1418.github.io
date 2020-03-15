@@ -42,7 +42,7 @@ $(document).ready(() => {
     .scroll(() => {
 
       if ($(window).scrollTop() != 0) {
-        $("#stickyNav").stop(true, false).fadeTo(250, 1);
+        $("#stickyNav").stop(true, false).fadeTo(125, 1, "linear");
       } else {
         $("#stickyNav").stop().fadeTo(250, 0);
         $("#about").stop().fadeTo(250, 0);
@@ -53,8 +53,13 @@ $(document).ready(() => {
         /* Check the location of each desired element */
         var objectBottom = $(this).offset().top + $(this).outerHeight();
 
+        //hides only-print sections
+        if ($(this).attr('class').split(/\s+/).includes("only-print")) {
+          return;
+        }
+
         /* If the element is completely within bounds of the window, fade it in */
-        if (objectBottom < windowBottom + $(this).innerHeight() * 0.7) {
+        if (objectBottom < windowBottom + $(this).innerHeight() * 0.7 && $(window).scrollTop() != 0) {
           //object comes into view (scrolling down)
           if ($(this).css("opacity") == 0) {
             $(this).stop().fadeTo(1000, 1);
@@ -131,8 +136,11 @@ $("#darkmode").click(() => {
       .children("i")
       .text("toggle_on");
     $(
-      "html, .navbar, .dropdown, #interest-icons > div, .logo, .small-logo, body, a"
+      "html, .dropdown, #interest-icons > div, .logo, .small-logo, body, a"
     ).removeAttr("style");
+
+    //can't remove all styling on navbar - otherwise breaks fadein/out/to
+    $(".navbar").css("background-color", "");
   }
 });
 
