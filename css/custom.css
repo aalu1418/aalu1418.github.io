@@ -35,6 +35,10 @@ a {
   /* align-items: center; */
 }
 
+#skills > .row {
+  align-items: center;
+}
+
 .columns > .row {
   display: flex;
   flex-direction: row;
