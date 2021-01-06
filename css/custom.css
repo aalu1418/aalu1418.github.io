@@ -263,6 +263,10 @@ a {
   margin: -7.5px;
 }
 
+#conflux-logo {
+  transform: scale(0.5);
+}
+
 .only-print {
   display: none;
 }
