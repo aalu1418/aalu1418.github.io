@@ -153,10 +153,15 @@ a {
 }
 
 .image {
-  width: 100%;
+  width: 176px;
+  max-height: 176px;
 }
 
-.image.round {
+.image-headshot {
+  width: 100%
+}
+
+.image-headshot.round {
   clip-path: circle(45% at center);
   object-fit: cover;
   filter: grayscale(100%);
@@ -174,6 +179,7 @@ a {
 
 .image.mobile {
   width: 75px;
+  max-height: 75px;
   margin: 5px;
   display: none;
 }
@@ -261,10 +267,6 @@ a {
 #gitlab {
   width: 60px;
   margin: -7.5px;
-}
-
-#conflux-logo {
-  transform: scale(0.5);
 }
 
 .only-print {

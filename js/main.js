@@ -130,6 +130,7 @@ $("#darkmode").click(() => {
     $(
       ".logo, .row > .small-logo, #interest-icons > div > .small-logo, #github, #continue > a > .small-logo"
     ).css("filter", "invert(0)");
+    $("#conflux-logo, #conflux-logo-mobile").attr("src","images/conflux_color.svg");
   } else {
     //turn on dark mode
     $("#darkmode")
@@ -141,6 +142,8 @@ $("#darkmode").click(() => {
 
     //can't remove all styling on navbar - otherwise breaks fadein/out/to
     $(".navbar").css("background-color", "");
+
+    $("#conflux-logo, #conflux-logo-mobile").attr("src","images/conflux_white.svg");
   }
 });
 
