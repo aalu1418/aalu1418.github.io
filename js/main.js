@@ -3,7 +3,7 @@ $(document).ready(() => {
   const totalH = $("#stickyNav").offset().top;
 
   $("#stickyNav").fadeTo(0, 0);
-  $("#about").fadeTo(0,0);
+  $("#about").fadeTo(0, 0);
 
   $(window).scroll(() => {
     const vPos = $(window).scrollTop();
@@ -21,26 +21,25 @@ $(document).ready(() => {
       $("#stickyNav").css({
         position: "fixed",
         top: 0,
-        left: 0
+        left: 0,
       });
       $(".navbar_container").css({
-        width: navbar_container_width
+        width: navbar_container_width,
       });
     } else {
       $("#stickyNav").css({
         position: "absolute",
         top: "",
-        left: ""
+        left: "",
       });
       $(".navbar_container").css({
-        width: "100%"
+        width: "100%",
       });
     }
   });
 
   $(window)
     .scroll(() => {
-
       if ($(window).scrollTop() != 0) {
         $("#stickyNav").stop(true, false).fadeTo(125, 1, "linear");
       } else {
@@ -49,17 +48,20 @@ $(document).ready(() => {
       }
 
       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-      $(".spaced").each(function() {
+      $(".spaced").each(function () {
         /* Check the location of each desired element */
         var objectBottom = $(this).offset().top + $(this).outerHeight();
 
         //hides only-print sections
-        if ($(this).attr('class').split(/\s+/).includes("only-print")) {
+        if ($(this).attr("class").split(/\s+/).includes("only-print")) {
           return;
         }
 
         /* If the element is completely within bounds of the window, fade it in */
-        if (objectBottom < windowBottom + $(this).innerHeight() * 0.7 && $(window).scrollTop() != 0) {
+        if (
+          objectBottom < windowBottom + $(this).innerHeight() * 0.7 &&
+          $(window).scrollTop() != 0
+        ) {
           //object comes into view (scrolling down)
           if ($(this).css("opacity") == 0) {
             $(this).stop().fadeTo(1000, 1);
@@ -80,9 +82,7 @@ $(document).ready(() => {
   if (
     hour > 7 &&
     hour < 18 &&
-    $("#darkmode")
-      .children("i")
-      .text() === "toggle_on"
+    $("#darkmode").children("i").text() === "toggle_on"
   ) {
     $("#darkmode").trigger("click");
   }
@@ -101,9 +101,7 @@ $("#interest-icons > div > img").click(() => {
 //toggle content
 $(".details > ul > li > div").click(() => {
   const list1 = $(event.target).siblings("ul"); //handle click on div
-  const list2 = $(event.target)
-    .parent("div")
-    .siblings("ul"); //handle click on div content
+  const list2 = $(event.target).parent("div").siblings("ul"); //handle click on div content
   // console.log(list1.length, list2.length);
   const list = list1.length === 1 ? list1 : list2;
   // console.log(list);
@@ -112,15 +110,9 @@ $(".details > ul > li > div").click(() => {
 
 //toggle dark mode
 $("#darkmode").click(() => {
-  if (
-    $("#darkmode")
-      .children("i")
-      .text() === "toggle_on"
-  ) {
+  if ($("#darkmode").children("i").text() === "toggle_on") {
     //turn off dark mode
-    $("#darkmode")
-      .children("i")
-      .text("toggle_off");
+    $("#darkmode").children("i").text("toggle_off");
     $("html, .navbar, .dropdown, #interest-icons > div").css(
       "background-color",
       "white"
@@ -130,12 +122,13 @@ $("#darkmode").click(() => {
     $(
       ".logo, .row > .small-logo, #interest-icons > div > .small-logo, #github, #continue > a > .small-logo"
     ).css("filter", "invert(0)");
-    $("#conflux-logo, #conflux-logo-mobile").attr("src","images/conflux_color.svg");
+    $("#conflux-logo, #conflux-logo-mobile").attr(
+      "src",
+      "images/conflux_color.svg"
+    );
   } else {
     //turn on dark mode
-    $("#darkmode")
-      .children("i")
-      .text("toggle_on");
+    $("#darkmode").children("i").text("toggle_on");
     $(
       "html, .dropdown, #interest-icons > div, .logo, .small-logo, body, a"
     ).removeAttr("style");
@@ -143,20 +136,23 @@ $("#darkmode").click(() => {
     //can't remove all styling on navbar - otherwise breaks fadein/out/to
     $(".navbar").css("background-color", "");
 
-    $("#conflux-logo, #conflux-logo-mobile").attr("src","images/conflux_white.svg");
+    $("#conflux-logo, #conflux-logo-mobile").attr(
+      "src",
+      "images/conflux_white.svg"
+    );
   }
 });
 
 //https://stackoverflow.com/questions/1234008/detecting-browser-print-event
-(function() {
-  var beforePrint = function() {
-    $(".spaced").each(function() {
+(function () {
+  var beforePrint = function () {
+    $(".spaced").each(function () {
       $(this).css("opacity", 1);
     });
   };
   if (window.matchMedia) {
     var mediaQueryList = window.matchMedia("print");
-    mediaQueryList.addListener(function(mql) {
+    mediaQueryList.addListener(function (mql) {
       if (mql.matches) {
         beforePrint();
       }
