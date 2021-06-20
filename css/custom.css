@@ -424,6 +424,7 @@ li.location-date {
 
   .container {
     width: 87%;
+    max-width: 7.5in;
   }
 
   .main-icons-header {
@@ -482,7 +483,7 @@ li.location-date {
   }
 
   div.row.content {
-    margin-bottom: 2pt;
+    margin-bottom: 0pt;
   }
 
   .small-logo {
