@@ -419,7 +419,7 @@ li.location-date {
   }
 
   .header {
-    margin-top: 2.5rem;
+    margin-top: 0 !important;
   }
 
   .container {
