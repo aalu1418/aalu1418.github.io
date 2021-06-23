@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: html to pdf
-        uses: aalu1418/web_to_pdf_action@master
+        uses: misaelnieto/web_to_pdf_action@master
         with:
           webPageURL: https://aalu1418.github.io
           outputFile: ./resume.pdf
