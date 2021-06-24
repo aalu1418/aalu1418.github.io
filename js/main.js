@@ -1,14 +1,25 @@
 //navbar - https://stackoverflow.com/questions/16329937/docking-a-fixed-nav-bar-to-the-top-on-scroll
 $(document).ready(() => {
   const totalH = $("#stickyNav").offset().top;
+  const totalD = Math.round(
+    $("#continue").offset().top - $("#name").offset().top
+  );
 
   $("#stickyNav").fadeTo(0, 0);
   $("#about").fadeTo(0, 0);
 
   $(window).scroll(function () {
-    const nameBottom = Math.round($("#name").offset().top);
-    const contButton = Math.round($("#continue").offset().top);
-    console.log(contButton - nameBottom);
+    const currentD = Math.round(
+      $("#continue").offset().top - $("#name").offset().top
+    );
+    const fadeOut = Math.max((2 * currentD - totalD) / totalD, 0);
+    const fadeIn = 1 - fadeOut;
+    $("#continue").css({
+      opacity: fadeOut,
+    });
+    $(".header-icons").css({
+      opacity: fadeIn,
+    });
   });
 
   $(window).scroll(() => {
