@@ -75,17 +75,6 @@ $(document).ready(() => {
       });
     })
     .scroll(); //invoke scroll-handler on page-load
-
-  //turn off darkmode between 7am and 6pm && darkmode is currently on
-  const time = new Date();
-  const hour = time.getHours();
-  if (
-    hour > 7 &&
-    hour < 18 &&
-    $("#darkmode").children("i").text() === "toggle_on"
-  ) {
-    $("#darkmode").trigger("click");
-  }
 });
 
 //toggle icon descriptions
@@ -106,41 +95,6 @@ $(".details > ul > li > div").click(() => {
   const list = list1.length === 1 ? list1 : list2;
   // console.log(list);
   $(list[0]).slideToggle();
-});
-
-//toggle dark mode
-$("#darkmode").click(() => {
-  if ($("#darkmode").children("i").text() === "toggle_on") {
-    //turn off dark mode
-    $("#darkmode").children("i").text("toggle_off");
-    $("html, .navbar, .dropdown, #interest-icons > div").css(
-      "background-color",
-      "white"
-    );
-    $("#interest-icons > div").css("border", "1.5px solid black");
-    $("body, a").css("color", "black");
-    $(
-      ".logo, .row > .small-logo, #interest-icons > div > .small-logo, #github, #continue > a > .small-logo"
-    ).css("filter", "invert(0)");
-    $("#conflux-logo, #conflux-logo-mobile").attr(
-      "src",
-      "images/conflux_color.svg"
-    );
-  } else {
-    //turn on dark mode
-    $("#darkmode").children("i").text("toggle_on");
-    $(
-      "html, .dropdown, #interest-icons > div, .logo, .small-logo, body, a"
-    ).removeAttr("style");
-
-    //can't remove all styling on navbar - otherwise breaks fadein/out/to
-    $(".navbar").css("background-color", "");
-
-    $("#conflux-logo, #conflux-logo-mobile").attr(
-      "src",
-      "images/conflux_white.svg"
-    );
-  }
 });
 
 //https://stackoverflow.com/questions/1234008/detecting-browser-print-event
