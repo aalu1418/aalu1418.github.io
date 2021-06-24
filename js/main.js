@@ -8,6 +8,7 @@ $(document).ready(() => {
   $("#stickyNav").fadeTo(0, 0);
   $("#about").fadeTo(0, 0);
 
+  // header
   $(window).scroll(function () {
     const currentD = Math.round(
       $("#continue").offset().top - $("#name").offset().top
@@ -22,6 +23,7 @@ $(document).ready(() => {
     });
   });
 
+  // navbar
   $(window).scroll(() => {
     const vPos = $(window).scrollTop();
 
@@ -55,6 +57,7 @@ $(document).ready(() => {
     }
   });
 
+  // fade in/out sections
   $(window)
     .scroll(() => {
       if ($(window).scrollTop() != 0) {
@@ -113,22 +116,3 @@ $(".details > ul > li > div").click(() => {
   // console.log(list);
   $(list[0]).slideToggle();
 });
-
-//https://stackoverflow.com/questions/1234008/detecting-browser-print-event
-(function () {
-  var beforePrint = function () {
-    $(".spaced").each(function () {
-      $(this).css("opacity", 1);
-    });
-  };
-  if (window.matchMedia) {
-    var mediaQueryList = window.matchMedia("print");
-    mediaQueryList.addListener(function (mql) {
-      if (mql.matches) {
-        beforePrint();
-      }
-    });
-  }
-
-  window.onbeforeprint = beforePrint;
-})();

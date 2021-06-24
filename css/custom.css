@@ -12,6 +12,7 @@ a {
 }
 
 h1 {
+  padding-top: 25vh;
   background-color: #121212;
   z-index: 10;
   position: sticky;
@@ -388,6 +389,9 @@ li.location-date {
   h1 {
     font-size: 26pt;
     margin-bottom: 2pt;
+    background-color: white;
+    position: relative;
+    padding-top: 0;
   }
 
   h4 {
@@ -425,6 +429,10 @@ li.location-date {
     margin-top: 0 !important;
   }
 
+  .header-icons {
+    opacity: 1 !important;
+  }
+
   .container {
     width: 87%;
     max-width: 7.5in;
@@ -449,6 +457,7 @@ li.location-date {
   .spaced {
     padding-top: 5px;
     border-top: 1px solid #ddd;
+    opacity: 1 !important;
     /* padding-bottom: 3rem; */
   }
 
