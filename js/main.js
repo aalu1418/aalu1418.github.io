@@ -1,10 +1,29 @@
 //navbar - https://stackoverflow.com/questions/16329937/docking-a-fixed-nav-bar-to-the-top-on-scroll
 $(document).ready(() => {
   const totalH = $("#stickyNav").offset().top;
+  const totalD = Math.round(
+    $("#continue").offset().top - $("#name").offset().top
+  );
 
   $("#stickyNav").fadeTo(0, 0);
   $("#about").fadeTo(0, 0);
 
+  // header
+  $(window).scroll(function () {
+    const currentD = Math.round(
+      $("#continue").offset().top - $("#name").offset().top
+    );
+    const fadeOut = Math.max((2 * currentD - totalD) / totalD, 0);
+    const fadeIn = 1 - fadeOut;
+    $("#continue").css({
+      opacity: fadeOut,
+    });
+    $(".header-icons").css({
+      opacity: fadeIn,
+    });
+  });
+
+  // navbar
   $(window).scroll(() => {
     const vPos = $(window).scrollTop();
 
@@ -38,6 +57,7 @@ $(document).ready(() => {
     }
   });
 
+  // fade in/out sections
   $(window)
     .scroll(() => {
       if ($(window).scrollTop() != 0) {
@@ -48,7 +68,7 @@ $(document).ready(() => {
       }
 
       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-      $(".spaced").each(function () {
+      $(".fade").each(function () {
         /* Check the location of each desired element */
         var objectBottom = $(this).offset().top + $(this).outerHeight();
 
@@ -75,17 +95,6 @@ $(document).ready(() => {
       });
     })
     .scroll(); //invoke scroll-handler on page-load
-
-  //turn off darkmode between 7am and 6pm && darkmode is currently on
-  const time = new Date();
-  const hour = time.getHours();
-  if (
-    hour > 7 &&
-    hour < 18 &&
-    $("#darkmode").children("i").text() === "toggle_on"
-  ) {
-    $("#darkmode").trigger("click");
-  }
 });
 
 //toggle icon descriptions
@@ -107,57 +116,3 @@ $(".details > ul > li > div").click(() => {
   // console.log(list);
   $(list[0]).slideToggle();
 });
-
-//toggle dark mode
-$("#darkmode").click(() => {
-  if ($("#darkmode").children("i").text() === "toggle_on") {
-    //turn off dark mode
-    $("#darkmode").children("i").text("toggle_off");
-    $("html, .navbar, .dropdown, #interest-icons > div").css(
-      "background-color",
-      "white"
-    );
-    $("#interest-icons > div").css("border", "1.5px solid black");
-    $("body, a").css("color", "black");
-    $(
-      ".logo, .row > .small-logo, #interest-icons > div > .small-logo, #github, #continue > a > .small-logo"
-    ).css("filter", "invert(0)");
-    $("#conflux-logo, #conflux-logo-mobile").attr(
-      "src",
-      "images/conflux_color.svg"
-    );
-  } else {
-    //turn on dark mode
-    $("#darkmode").children("i").text("toggle_on");
-    $(
-      "html, .dropdown, #interest-icons > div, .logo, .small-logo, body, a"
-    ).removeAttr("style");
-
-    //can't remove all styling on navbar - otherwise breaks fadein/out/to
-    $(".navbar").css("background-color", "");
-
-    $("#conflux-logo, #conflux-logo-mobile").attr(
-      "src",
-      "images/conflux_white.svg"
-    );
-  }
-});
-
-//https://stackoverflow.com/questions/1234008/detecting-browser-print-event
-(function () {
-  var beforePrint = function () {
-    $(".spaced").each(function () {
-      $(this).css("opacity", 1);
-    });
-  };
-  if (window.matchMedia) {
-    var mediaQueryList = window.matchMedia("print");
-    mediaQueryList.addListener(function (mql) {
-      if (mql.matches) {
-        beforePrint();
-      }
-    });
-  }
-
-  window.onbeforeprint = beforePrint;
-})();
