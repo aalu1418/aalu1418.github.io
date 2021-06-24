@@ -336,7 +336,27 @@ li.location-date {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+  .main-icons-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-icons-header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 60vw;
+    padding-bottom: 5vw;
+  }
+  .main-icons-header div p {
+    padding-left: 5vw;
+    margin-bottom: 0;
+  }
+  .logo {
+    max-width: 15vw;
+  }
   .navbar-list > .navbar-edu {
     display: none;
   }
@@ -355,10 +375,6 @@ li.location-date {
     display: block;
   }
   .image.main {
-    display: none;
-  }
-
-  #continue {
     display: none;
   }
 }
