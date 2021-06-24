@@ -11,9 +11,20 @@ a {
   color: white;
 }
 
+h1 {
+  background-color: #121212;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+}
+
 .header {
   text-align: center;
-  margin-top: 25%;
+  margin-top: 15%;
+}
+
+.header-icons {
+  text-align: center;
 }
 
 .container {

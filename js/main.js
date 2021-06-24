@@ -5,6 +5,12 @@ $(document).ready(() => {
   $("#stickyNav").fadeTo(0, 0);
   $("#about").fadeTo(0, 0);
 
+  $(window).scroll(function () {
+    const nameBottom = Math.round($("#name").offset().top);
+    const contButton = Math.round($("#continue").offset().top);
+    console.log(contButton - nameBottom);
+  });
+
   $(window).scroll(() => {
     const vPos = $(window).scrollTop();
 
@@ -48,7 +54,7 @@ $(document).ready(() => {
       }
 
       var windowBottom = $(this).scrollTop() + $(this).innerHeight();
-      $(".spaced").each(function () {
+      $(".fade").each(function () {
         /* Check the location of each desired element */
         var objectBottom = $(this).offset().top + $(this).outerHeight();
 
