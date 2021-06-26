@@ -21,6 +21,10 @@ $(document).ready(() => {
     $(".header-icons").css({
       opacity: fadeIn,
     });
+    $("#name").css({
+      "font-size": `${5 + 1 * fadeOut}rem`,
+    });
+    console.log(fadeOut, fadeIn);
   });
 
   // navbar

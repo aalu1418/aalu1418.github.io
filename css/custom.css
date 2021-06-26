@@ -403,7 +403,7 @@ li.location-date {
   }
 
   h1 {
-    font-size: 26pt;
+    font-size: 26pt !important;
     margin-bottom: 2pt;
     background-color: white;
     position: relative;
