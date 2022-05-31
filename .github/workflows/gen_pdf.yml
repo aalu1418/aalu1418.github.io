@@ -1,0 +1,22 @@
+name: Generate resume pdf
+
+on: [page_build]
+
+jobs:
+  generate-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: html to pdf
+        uses: misaelnieto/web_to_pdf_action@master
+        with:
+          webPageURL: https://aalu1418.github.io
+          outputFile: ./resume.pdf
+          usePuppeteer: true
+          pdfOptions: '{"scale": 0.97}'
+      - name: Add resume as new commit
+        run: |
+          git config --global user.name 'pdf-gen-bot'
+          git config --global user.email 'pdf-gen-bot@users.noreply.github.com'
+          git commit -am "new resume file generated"
+          git push
