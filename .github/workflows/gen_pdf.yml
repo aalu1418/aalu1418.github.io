@@ -13,7 +13,7 @@ jobs:
           webPageURL: https://aalu1418.github.io
           outputFile: ./resume.pdf
           usePuppeteer: true
-          pdfOptions: '{"scale": 0.97}'
+          pdfOptions: '{"scale": 0.99}'
       - name: Add resume as new commit
         run: |
           git config --global user.name 'pdf-gen-bot'
